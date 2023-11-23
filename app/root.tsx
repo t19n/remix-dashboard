@@ -9,7 +9,10 @@ import {
 	ScrollRestoration,
 } from '@remix-run/react'
 
+import stylesheet from '~/global.css'
+
 export const links: LinksFunction = () => [
+	{ rel: 'stylesheet', href: stylesheet },
 	...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ]
 
@@ -23,7 +26,10 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<Outlet />
+				<header className="h-36 bg-sky-600" />
+				<main className="p-4">
+					<Outlet />
+				</main>
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
