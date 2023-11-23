@@ -26,10 +26,7 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<header className="h-36 bg-sky-600" />
-				<main className="p-4">
-					<Outlet />
-				</main>
+				<Outlet />
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
