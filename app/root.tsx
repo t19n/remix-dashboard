@@ -9,6 +9,9 @@ import {
 	ScrollRestoration,
 } from '@remix-run/react'
 
+import '@fontsource-variable/inter/wght.css'
+import '@fontsource/lusitana/400.css'
+import '@fontsource/lusitana/700.css'
 import stylesheet from '~/global.css'
 
 export const links: LinksFunction = () => [
@@ -25,7 +28,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body>
+			<body className="font-sans antialiased">
 				<Outlet />
 				<ScrollRestoration />
 				<Scripts />
